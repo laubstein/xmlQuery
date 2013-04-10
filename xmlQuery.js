@@ -10,8 +10,8 @@
  * Based on jQuery - (http://jquery.com)
  */
 
-/*jslint nomen: true, unparam: true, regexp: true, sloppy: true, plusplus: true, continue: true */
-/*global define, window, document, undefined */
+/*jslint nomen: true, unparam: true, regexp: true, sloppy: true, plusplus: true, continue: true, white: true */
+/*global define, window, document, DOMParser, ActiveXObject, XMLSerializer */
 
 (function (window) {
     var
