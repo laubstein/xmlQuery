@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+
+    <title>xmlQuery by laubstein</title>
+  </head>
+
+  <body>
+
+    <header>
+      <div class="container">
+        <h1>xmlQuery</h1>
+        <h2>Javascript XML manipulation inspired on jQuery.</h2>
+
+        <section id="downloads">
+          <a href="https://github.com/laubstein/xmlQuery/zipball/master" class="btn">Download as .zip</a>
+          <a href="https://github.com/laubstein/xmlQuery/tarball/master" class="btn">Download as .tar.gz</a>
+          <a href="https://github.com/laubstein/xmlQuery" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
+        </section>
+      </div>
+    </header>
+
+    <div class="container">
+      <section id="main_content">
+        <h1>xmlQuery</h1>
+
+<p>Javascript XML manipulation inspired on <a href="http://jquery.com/">jQuery</a>.</p>
+
+<h3>Why?</h3>
+
+<p>When trying to manipulate XML data using jQuery, I realized that all the elements and attributes are turned into lower-case and, in some cases, the code do not work well on IE.</p>
+
+<h3>Supported methods</h3>
+
+<table>
+<tr>
+<td><b>append (value)</b></td>
+<td>Append an element</td>
+        </tr>
+<tr>
+<td><b>attr (name, [value])</b></td>
+<td>Get os set an attribute</td>
+        </tr>
+<tr>
+<td><b>clone ([deep])</b></td>
+<td>Clone the set of elements</td>
+        </tr>
+<tr>
+<td><b>eq (idx)</b></td>
+<td>Returns the element at nth position</td>
+        </tr>
+<tr>
+<td><b>find (elementName)</b></td>
+<td>Returns the elements with the specified name</td>
+        </tr>
+<tr>
+<td><b>first ()</b></td>
+<td>Returns the first element in the set</td>
+        </tr>
+<tr>
+<td><b>last ()</b></td>
+<td>Returns the last element in the set</td>
+        </tr>
+<tr>
+<td><b>serialize ()</b></td>
+<td>Returns the serialized xml</td>
+        </tr>
+<tr>
+<td><b>size ()</b></td>
+<td>Returns the number of elements in the set</td>
+        </tr>
+</table><h3>Example</h3>
+
+<div class="highlight"><pre>
+<span class="kd">var</span> <span class="nx">myXMLData</span> <span class="o">=</span> <span class="s1">'&lt;root&gt;&lt;myData dataType="Boolean"&gt;True&lt;/myData&gt;&lt;/root&gt;'</span><span class="p">,</span>
+    <span class="nx">myXMLQuery</span> <span class="o">=</span> <span class="nx">$X</span><span class="p">(</span><span class="nx">myXMLData</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'Serialized XML: '</span> <span class="o">+</span> <span class="nx">myXMLQuery</span><span class="p">.</span><span class="nx">serialize</span><span class="p">());</span>
+<span class="c1">// returns: Serialized XML: &lt;root&gt;&lt;myData dataType="Boolean"&gt;True&lt;/myData&gt;&lt;/root&gt;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'Attribute: '</span> <span class="o">+</span> <span class="nx">myXMLQuery</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="s1">'myData'</span><span class="p">).</span><span class="nx">attr</span><span class="p">(</span><span class="s1">'dataType'</span><span class="p">));</span>
+<span class="c1">// returns: Attribute: Boolean</span>
+
+</pre></div>
+
+<p><a href="http://laubstein.github.com/xmlQuery/test/all.html">Check the test results</a>.</p>
+
+<hr><p>Created by <a href="http://github.com/laubstein">Thiago Laubstein</a>.</p>
+      </section>
+    </div>
+
+    
+  </body>
+</html>
